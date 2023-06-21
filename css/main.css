@@ -149,8 +149,8 @@ p, a{
     background-color: #000;
     height: 2px;
     width: 20px;
-    position: absolute; 
-    z-index: 1;
+    position: relative; 
+    z-index: 1; /* Indice de profondeur pour superposer les éléments */
 }
 
 .navbar-toggler-icon::before,
