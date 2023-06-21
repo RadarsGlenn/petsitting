@@ -129,106 +129,54 @@ p, a{
     }
 }
 
+@media (max-width: 768px) {
+    .mobile-hidden {
+      display: none;
+    }
+}
+
+
+
+.article-down {
+    margin-top: 200px; /* Ajustez la valeur selon votre besoin */
+}
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Sidenav menu */
-.sidenav {
-    height: 100%;
-    width: 250px;
-    position: fixed;
+.navbar-toggler-icon {
+    background-color: #000;
+    height: 2px;
+    width: 20px;
+    position: absolute; 
     z-index: 1;
-    top: 0;
-    left: -250px;
-    background-color: #e8e8e8;
-    padding-top: 60px;
-  }
-  
-  /* Sidenav menu links */
-  .sidenav a {
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-  }
-  
-  .sidenav a:hover {
-    color: #111;
-  }
-  
-  .sidenav ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  /* Active class */
-  .sidenav.active {
-    left: 0;
-  }
-  
-  /* Close btn */
-  .sidenav .close {
-    position: absolute;
-    top: 0;
-    font-size: 36px;
-  }
-  
-  /* Icône burger */
-  .burger-icon span {
-    display: block;
-    width: 35px;
-    height: 5px;
-    background-color: black;
-    margin: 6px 0;
-    margin-left: 3rem;
-  }
+}
 
-/* Styles pour les écrans d'ordinateur */
-@media only screen and (min-width: 768px) {
-    #openBtn {
-      display: none; /* Masquer le bouton burger */
-    }
-  
-    #mySidenav {
-      display: block; /* Afficher la barre de navigation */
-    }
-  }
-  
-  /* Styles pour les écrans de petite taille (mobile) */
-  @media only screen and (max-width: 767px) {
-    #openBtn {
-      display: block; /* Afficher le bouton burger */
-    }
-  
-    #mySidenav {
-      display: none; /* Masquer la barre de navigation */
-    }
-  }
-  
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+    content: '';
+    background-color: #000;
+    height: 2px;
+    width: 20px;
+    position: absolute; 
+    left: 0; 
+    transition: transform 0.3s ease; 
+}
+
+.navbar-toggler-icon::before {
+    top: -6px; /* Positionnement de la première barre */
+}
+
+.navbar-toggler-icon::after {
+    top: 6px; /* Positionnement de la deuxième barre */
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::before {
+    transform: rotate(45deg); /* Animation de rotation pour la première barre lorsque le menu est ouvert */
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::after {
+    transform: rotate(-45deg); /* Animation de rotation pour la deuxième barre lorsque le menu est ouvert */
+}
   
